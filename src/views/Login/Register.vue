@@ -71,12 +71,14 @@ export default {
                 params:this.model
             })
             .then(res=>{
-                if(res.data.success){
-                    console.log(res.data.success, res.data.message);
+                if(res.success){
+                    console.log(res.success, res.message);
+                    //注册成功后跳转登录界面
                     this.$router.push({
                         name:'login'
                     })
-                    // <router-link to="/Login/Login"></router-link>
+                }else{
+                    console.log(res.success, res.message);
                 }
             })
             .catch(error=>{

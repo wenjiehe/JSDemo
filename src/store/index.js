@@ -10,16 +10,16 @@ export default new Vuex.Store({
     password:""
   },
   mutations: { //赋值model
-    setupuser(state, use, pas){
-      alert('你提交了么')
-      state.username = use,
-      state.password = pas
+    setupusername(state, use){
+      state.username=use
+    },
+    setuppassword(state, pas){
+      state.password=pas
     }
   },
   actions: {
   },
-  modules: {
-  },
-  getters: {
+  getters:{
+
   }
 })

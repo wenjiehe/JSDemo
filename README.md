@@ -1,5 +1,45 @@
 # jingdong2
 
+## 一个合格的前端工程师需要哪些技能
+
+* 基础技能
+    - HTML
+    - CSS
+    - JAVASCRIPT
+    
+* 进阶技能
+    - HTML5
+    - CSS3
+    - ES6
+    
+* 前端工程化
+    - JS模块化
+    - CSS模块化
+    - 打包工具:WEBPACK
+    - TASK RUNNING:GULP
+    
+* 前端框架
+    - JQUERY
+    - VUE
+    
+- 后端开发
+    - NODEJS
+    - NPM包管理工具
+    - NODEJS框架
+    - EXPRESS
+    
+- 网络基础
+    - HTTP协议
+    - AJAX
+    - 同源策略
+    - CORS
+    
+* 设计模式
+    - 设计原则
+    - 单例模式
+    - 代理模式
+    - 建造者模式
+
 ## 编译环境
 
 * IDE及版本:Visual Studio Code  ||  1.41.1
@@ -77,6 +117,8 @@ this.$router.push({
  [Vuex](https://vuex.vuejs.org/zh/installation.html)
 
  [Vue Loader](https://vue-loader-v14.vuejs.org/zh-cn/)
+ 
+ [Vue Router](https://router.vuejs.org/zh/)
 
 [移动端UI库:cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/introduction
 )

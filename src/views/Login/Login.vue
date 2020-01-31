@@ -72,30 +72,22 @@ export default {
                 const result=await this.$http.get('/api/login',{
                     params:this.model
                 })
-                if(result.data.success){
-                    console.log(result.data.success, result.data.username, result.data.password)
+                if(result.success){
+                    console.log(result.success, result.username, result.password, result.code)
                     //清除所有存储到本地的数据
-                    window.localStorage.clear()
-
+                    localStorage.clear()
                     //存储到本地
-                    this.$store.dispatch('setupUsername', result.data.username)
-                    this.$store.dispatch('setupPassword', result.data.password)
-                    // this.$store.commit('setupuser', result.data.username, result.data.password)
-                    window.localStorage.setItem('username', result.data.username)
-                    window.localStorage.setItem('password', result.data.password)
+                    this.$store.commit('setupusername',result.username)
+                    this.$store.commit('setuppassword',result.password)
+                    localStorage.setItem('username',result.username)
+                    localStorage.setItem('password',result.password)
 
-                    console.log(use + 21345, pas)
+                    this.$router.push({
+                        name:'home'
+                    })
                 }
             } catch (error) { //如果有错误，在这里抛出
                 console.log(1111 + error)
-            }
-        },
-        computed:{
-            use(){
-                return this.$store.state.username
-            },
-            pas(){
-                return this.$store.state.password
             }
         }
     },

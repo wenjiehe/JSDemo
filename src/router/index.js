@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Register from '../views/Login/Register.vue'
-// import Login from '../views/Login/Login.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +8,7 @@ const routes = [
   {
     path:'/',
     redirect:{ //重定向至登录界面
-      name:'login'
+      name:'home'
     }
   },
   {
@@ -25,6 +24,11 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     //组件引用，使用的是懒加载方式，不用懒加载，项目越大，空白时间会很长
     component: () => import(/* webpackChunkName: "about" */ '../views/Login/Login.vue')
+  },
+  {
+    path: '/Home/Home',
+    name: 'home',
+    component: () => import('../views/Home/Home.vue')
   }
 ]
 
