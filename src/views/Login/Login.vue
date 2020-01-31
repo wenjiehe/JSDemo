@@ -78,14 +78,24 @@ export default {
                     window.localStorage.clear()
 
                     //存储到本地
-                    this.$store.commit('setupuser', result.data.username, result.data.password)
+                    this.$store.dispatch('setupUsername', result.data.username)
+                    this.$store.dispatch('setupPassword', result.data.password)
+                    // this.$store.commit('setupuser', result.data.username, result.data.password)
                     window.localStorage.setItem('username', result.data.username)
                     window.localStorage.setItem('password', result.data.password)
 
-                    console.log(this.$store.state.username + 21345, this.$store.state.password)
+                    console.log(use + 21345, pas)
                 }
             } catch (error) { //如果有错误，在这里抛出
                 console.log(1111 + error)
+            }
+        },
+        computed:{
+            use(){
+                return this.$store.state.username
+            },
+            pas(){
+                return this.$store.state.password
             }
         }
     },

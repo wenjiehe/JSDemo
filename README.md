@@ -2,10 +2,10 @@
 
 ## 编译环境
 
-* IDE:Visual Studio Code 1.41.1
-* 语言:HTML/CSS/JavaScript/Vue
-* 搭建项目工具及版本:Vue CLI 3.x
-* 电脑系统:macOS Catalina 10.15.2
+* IDE及版本:Visual Studio Code  ||  1.41.1
+* 语言:HTML/CSS/JavaScript
+* 搭建项目工具及版本:Vue CLI 3.x   || @vue/cli 4.1.2
+* 电脑系统及版本:macOS Catalina   ||  10.15.2
 
 基于Vue CLI创建的项目，项目所需环境:
 
@@ -71,6 +71,12 @@ this.$router.push({
 
  [Vue CLI 配置参考](https://cli.vuejs.org/zh/config/#全局-cli-配置
 )
+
+ [Vue](https://cn.vuejs.org/v2/guide/)
+
+ [Vuex](https://vuex.vuejs.org/zh/installation.html)
+
+ [Vue Loader](https://vue-loader-v14.vuejs.org/zh-cn/)
 
 [移动端UI库:cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/introduction
 )

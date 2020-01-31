@@ -29,15 +29,13 @@ module.exports = {
                             message:'注册成功'
                         })
                     }
-                })
+                }),
                 //登录接口
                 app.get('/api/login',(req,res)=>{
                     res.json({
                         success:true,
-                        user:({
-                            username:'zhaoyun',
-                            password:'12345'
-                        })
+                        username:'zhaoyun',
+                        password:'12345'
                     })
                 })
             }
