@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/Login/Register">注册</router-link> |
-      <router-link to="/Login/Login">登录</router-link>
+      <!-- <router-link to="/Login/Register">注册</router-link> |
+      <router-link to="/Login/Login">登录</router-link> -->
     </div>
     <router-view/>
   </div>

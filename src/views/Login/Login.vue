@@ -83,7 +83,7 @@ export default {
                     localStorage.setItem('password',result.password)
 
                     this.$router.push({
-                        name:'home'
+                        path:'/bottomNav/Home/Home'
                     })
                 }
             } catch (error) { //如果有错误，在这里抛出

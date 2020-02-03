@@ -100,6 +100,101 @@ module.exports = {
 
                         ]
                     })
+                }),
+                //获取分类页面的分类数据
+                app.get('/api/classify',(req,res)=>{
+                    switch (req.query.type) {
+                        case '0':
+                            res.json({
+                                data:[
+                                    {
+                                        label: '华为',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                                    },
+                                    {
+                                        label: '荣耀',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                                    },
+                                    {
+                                        label: '苹果',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                                    }
+                                ]
+                            })
+                            break;
+                        case '1':
+                            res.json({
+                                data:[
+                                    {
+                                        label: '小米',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                                    },
+                                    {
+                                        label: 'oppo',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                                    },
+                                    {
+                                        label: 'apple',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                                    }
+                                ]
+                            })
+                            break;
+                        case '2':
+                            res.json({
+                                data:[
+                                    {
+                                        label: 'magic',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                                    },
+                                    {
+                                        label: 'http',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                                    },
+                                    {
+                                        label: 'com',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                                    }
+                                ]
+                            })
+                            break;
+                        case '3':
+                            res.json({
+                                data:[
+                                    {
+                                        label: 'xing',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                                    },
+                                    {
+                                        label: 'chu',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                                    },
+                                    {
+                                        label: 'did',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                                    }
+                                ]
+                            })
+                            break;
+                        default:
+                            res.json({
+                                data:[
+                                    {
+                                        label: 'other',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                                    },
+                                    {
+                                        label: 'book',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                                    },
+                                    {
+                                        label: 'look',
+                                        image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                                    }
+                                ]
+                            })
+                            break;
+                    }
                 })
             }
         }

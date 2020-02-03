@@ -8,7 +8,7 @@ const routes = [
   {
     path:'/',
     redirect:{ //重定向至登录界面
-      name:'home'
+      name:'bottomNav'
     }
   },
   {
@@ -29,6 +29,38 @@ const routes = [
     path: '/Home/Home',
     name: 'home',
     component: () => import('../views/Home/Home.vue')
+  },
+  {
+    path: '/bottomNav',
+    name: 'bottomNav',
+    component: () => import('../views/BottomNav.vue'),
+    children: [
+      { //首页
+        path: 'Home/Home',
+        name: 'home',
+        component: () => import('../views/Home/Home.vue')
+      },
+      { //分类
+        path: 'List/List',
+        name: 'list',
+        component: () => import('../views/List/List.vue')
+      },
+      { //搜索
+        path: 'Search/Search',
+        name: 'search',
+        component: () => import('../views/Search/Search.vue')
+      },
+      { //购物车
+        path: 'Cart/Cart',
+        name: 'cart',
+        component: () => import('../views/Cart/Cart.vue')
+      },
+      { //我的
+        path: 'Mine/Mine',
+        name: 'mine',
+        component: () => import('../views/Mine/Mine.vue')
+      }
+    ]
   }
 ]
 

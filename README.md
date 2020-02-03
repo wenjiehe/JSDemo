@@ -80,6 +80,70 @@ npm install
 control + C
 ```
 
+## Vue.js的生命周期
+
+Vue实例有一个完整的生命周期，也就是从开始创建、初始化数据、编译模板、挂载Dom、渲染->更新->渲染、销毁等一系列过程。从创建到销毁的过程，就是生命周期。
+
+1. 浏览器渲染过程
+
+* 构建DOM树
+* 构建css规则树，根据执行顺序解析js文件
+* 构建渲染树Render Tree
+* 渲染树布局layout
+* 渲染树绘制
+
+2. 生命周期有哪些方法，作用是什么，调用时机
+
+```JavaScript
+
+//实例组件刚创建，元素DOM和数据都还没有初始化。
+//和OC比较，相当于OC中的init方法
+beforeCreate(){
+
+}
+
+//数据已经初始化完成，元素DOM还未渲染。
+//和OC比较，相当于OC中的viewDidLoad方法
+created(){
+
+}
+
+//在挂载开始之前被调用:相关的render函数首次被调用
+//和OC比较，相当于OC中的viewDidLoad方法
+beforeMount(){
+
+}
+
+//数据和DOM都挂载完成，可以在这方法中操作DOM
+//和OC比较，相当于OC中的viewDidAppear方法
+mounted(){
+
+}
+
+//页面数据改变了就会触发，数据更新之前，页面数据还是原来的数据
+beforeUpdate(){
+
+}
+
+//页面数据改变了都会触发，数据更新完毕，页面的数据是更新完成后的
+update(){
+
+}
+
+//在组件销毁之前执行
+//和OC比较，相当于OC中的viewDidDisappear方法
+beforeDestroy(){
+
+}
+
+//组件已销毁
+//和OC比较，相当于OC中的dealloc方法
+destroyed(){
+
+}
+
+```
+
 ## 问题
 
 * permission denied
@@ -119,10 +183,14 @@ this.$router.push({
  [Vue Loader](https://vue-loader-v14.vuejs.org/zh-cn/)
  
  [Vue Router](https://router.vuejs.org/zh/)
+ 
+ [CORS](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
 
 [移动端UI库:cube-ui](https://didi.github.io/cube-ui/#/zh-CN/docs/introduction
 )
 
  [axios](https://www.kancloud.cn/yunye/axios/234845)
 
- [参考博客](https://blog.csdn.net/qq_36407748/article/details/82050976)
+[参考博客:vue.config.js](https://blog.csdn.net/qq_36407748/article/details/82050976)
+
+[vue生命周期详解](https://www.jianshu.com/p/410b6099be69)
