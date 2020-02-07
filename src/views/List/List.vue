@@ -11,7 +11,7 @@
             <ul>
                 <li v-for="(tag, index) in tags" :key="index">
                     <img :src="tag.image" alt="">
-                    <p>{{tag.label}}</p>
+                    <p>{{tag.label}} <i class="cubeic-add" @click="addToCart($event,tag)"></i> </p>
                 </li>
             </ul>
         </cube-scroll>
@@ -93,6 +93,9 @@ export default {
                 }
             })
             this.tags = result.data
+        },
+        addToCart(e,tag){ //添加商品到购物车
+            
         }
     },
     created(){
@@ -100,7 +103,11 @@ export default {
         this.getclassify(0)
     },
     mounted(){
-        
+        const leftPanels=document.querySelector('.leftPanels')
+        const rightPanels=document.querySelector('.rightPanels')
+        const bodyHeight=document.documentElement.clientHeight
+        leftPanels.style.height=bodyHeight-57+'px'
+        rightPanels.style.height=bodyHeight-57+'px'
     }
 }
 </script>
@@ -133,4 +140,6 @@ export default {
                     img 
                         width 80px
                         height  80px
+                    .cubeic-add
+                        font-size 18px
 </style>

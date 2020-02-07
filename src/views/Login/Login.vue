@@ -82,9 +82,13 @@ export default {
                     localStorage.setItem('username',result.username)
                     localStorage.setItem('password',result.password)
 
-                    this.$router.push({
-                        path:'/bottomNav/Home/Home'
-                    })
+                    if (this.$route.query.redirect) {
+                        this.$router.replace({path:this.$route.query.redirect})
+                    }else{
+                        this.$router.replace({
+                            path:'/bottomNav'
+                        })
+                    }
                 }
             } catch (error) { //如果有错误，在这里抛出
                 console.log(1111 + error)

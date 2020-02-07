@@ -7,8 +7,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path:'/',
-    redirect:{ //重定向至登录界面
-      name:'bottomNav'
+    redirect:{ //重定向至底部Tabbar界面
+      path:'/bottomNav'
     }
   },
   {
@@ -53,11 +53,17 @@ const routes = [
       { //购物车
         path: 'Cart/Cart',
         name: 'cart',
+        meta:{
+          requireAuth:true, //当有这个字段的时候，那么就是需要登录的
+        },
         component: () => import('../views/Cart/Cart.vue')
       },
       { //我的
         path: 'Mine/Mine',
         name: 'mine',
+        meta:{
+          requireAuth:true, //当有这个字段的时候，那么就是需要登录的
+        },
         component: () => import('../views/Mine/Mine.vue')
       }
     ]

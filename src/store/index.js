@@ -7,7 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: { //设置model
     username:"",
-    password:""
+    password:"",
+    cartarry:[]
   },
   mutations: { //赋值model
     setupusername(state, use){
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     setuppassword(state, pas){
       state.password=pas
+    },
+    tocart(state, arr){
+      
     }
   },
   actions: {

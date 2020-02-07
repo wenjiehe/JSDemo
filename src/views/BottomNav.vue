@@ -64,11 +64,32 @@ export default {
               break;
       }
     }
+  },
+  created(){
+      switch (this.$route.path) {
+        case '/bottomNav/Home/Home':
+              this.selectedLabelDefault='首页'
+              break;
+        case '/bottomNav/List/List':
+              this.selectedLabelDefault='分类'
+              break;
+        case '/bottomNav/Search/Search':
+              this.selectedLabelDefault='搜索'
+              break;
+        case '/bottomNav/Cart/Cart':
+              this.selectedLabelDefault='购物车'
+              break;
+        case '/bottomNav/Mine/Mine':
+              this.selectedLabelDefault='我的'
+              break;
+          default:
+              break;
+      }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
     .cube-tab-bar.btmNav
         position fixed
         bottom 0
